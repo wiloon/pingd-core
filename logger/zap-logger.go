@@ -170,6 +170,9 @@ func Warnf(msg string, args ...interface{}) {
 func Sync() {
 	GetLogger().Sync()
 }
+func Fatalf(msg string, args ...interface{}) {
+	GetLogger().Infof(msg, args...)
+}
 
 // Deprecated: Printf
 func Println(args ...interface{}) {
